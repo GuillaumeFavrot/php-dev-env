@@ -20,9 +20,19 @@ $ docker-compose up -d
 the "-d" is optionnal but it allows the container to run in detached mode.
 
 The app should now be acessible on either :
-- http://localhost/index.php : without the path to index.php the request will lead to the nginx landing page. It's possible to replace inde.php by any other ressource ine the public folder.
+- http://localhost/index.php : without the path to index.php the request will lead to the nginx landing page. It's possible to replace index.php by any other ressource in the public folder.
 - http://127.0.0.1/ : if hitting the loopback address nginx will by default serve the index.php file. To reach any other resource in the public folder the ressurce name should be specified in the URL.
 - http://0.0.0.0 : This address acts like the loopback address.
+
+# Database management
+
+1/ PHPMyadmin
+
+This container comes equiped with PHPMyadmin. This software is a web gui useful for accessing and managing a mySQL database.
+
+The web portal is accessible on the loopback address on the port 8080.
+
+To connect to the portal use your MySQL DB credentials. The 'server' field is optional.
 
 # Troubleshooting
 

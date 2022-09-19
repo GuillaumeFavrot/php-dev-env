@@ -42,6 +42,15 @@ services:
     # Finally, the ports block exposes port 3306 so we can connect to it with a client such as MySQL Workbench for managing the database.
     ports:
       - 3306:3306
+  
+  phpmyadmin:
+    #Phpmyadmin is a web GUI for MySQL it allows for easy db management
+    image: phpmyadmin
+    ports:
+    #The web portal is accessible though the port 8080.
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
 
 volumes:
   mysqldata: {}
